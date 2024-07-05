@@ -1,5 +1,9 @@
 <?php
 class Register extends Controller{
+    public function __construct()
+    {
+        AuthMiddleware::autentikasiSudahMasuk();
+    }
     public function index(){
         if (empty($_SESSION['csrf_token'])) {
             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));

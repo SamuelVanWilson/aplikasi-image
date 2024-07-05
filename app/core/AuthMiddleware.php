@@ -1,6 +1,6 @@
 <?php
 class AuthMiddleware{
-    public static function handle() {
+    public static function autentikasiBaruMasuk() {
         if (!isset($_SESSION['user_id'])) {
             if (isset($_COOKIE['remember_me'])) {
                 $userModel = new User_model();
@@ -11,6 +11,13 @@ class AuthMiddleware{
                 }
             }
             header('Location: ' . BASE_URL . 'login');
+            exit();
+        }
+    }
+
+    public static function autentikasiSudahMasuk(){
+        if (isset($_SESSION['user_id'])) {
+            header('Location: ' . BASE_URL . 'home');
             exit();
         }
     }

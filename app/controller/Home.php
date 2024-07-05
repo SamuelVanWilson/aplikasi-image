@@ -2,7 +2,7 @@
 class Home extends Controller{
     public function __construct()
     {
-        AuthMiddleware::handle();
+        AuthMiddleware::autentikasiBaruMasuk();
     }
     public function index(){
         $data["judul"] = "Beranda";
