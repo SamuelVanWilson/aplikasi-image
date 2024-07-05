@@ -1,5 +1,9 @@
 <?php
 class Home extends Controller{
+    public function __construct()
+    {
+        AuthMiddleware::handle();
+    }
     public function index(){
         $data["judul"] = "Beranda";
         $this->view('template/header', $data);

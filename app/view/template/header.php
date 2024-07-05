@@ -4,7 +4,7 @@
     <title><?= $data["judul"] ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/output.css" rel="stylesheet">
+    <link href="<?= BASE_URL ?>public/css/output.css" rel="stylesheet">
 </head>
 <body>
 <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
