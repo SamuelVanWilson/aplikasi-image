@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $data["judul"] ?></title>
+    <title><?= $judul ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?= BASE_URL ?>public/css/output.css" rel="stylesheet">
 </head>
 <body>
+<?php if ($navigasi_halaman == 'home') :?>
 <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -32,3 +33,9 @@
     </div>
   </div>
 </nav>
+<?php endif; ?>
+
+<?php if ($navigasi_halaman  == 'awal') :?>
+    <h1 class="mb-4 text-center mt-28 text-3xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-800 from-indigo-600">Better Data</span><br> Scalable AI.</h1>
+<?php endif; ?>
+<div id="default-tab-content">

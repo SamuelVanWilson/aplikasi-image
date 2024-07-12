@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../model/User_model.php';
 class AuthMiddleware{
     public static function autentikasiBaruMasuk() {
         if (!isset($_SESSION['user_id'])) {

@@ -62,6 +62,10 @@ class Database {
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function rowCount(){
+        return $this->stmt->rowCount();
+    }
+
     public function lastInsertId(){
         return $this->dbh->lastInsertId();
     }

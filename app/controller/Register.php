@@ -10,6 +10,7 @@ class Register extends Controller{
         }
 
         $data["judul"] = "Beranda";
+        $data['navigasi_halaman'] = 'awal';
         $this->view('template/header', $data);
         $this->view('register/index');
         $this->view('template/footer');
@@ -23,8 +24,8 @@ class Register extends Controller{
                 $token = bin2hex(random_bytes(16));
                 setcookie('remember_me', $token, time() + (86400 * 30), "/");
                 $this->model('User_model')->setRememberToken($userId, $token);
+                header("Location: " . BASE_URL . "Home");
             }
-            header("Location: " . BASE_URL . "Home");
         } else {
             die("heheh, ngirimin apaan hayoo");
         }
