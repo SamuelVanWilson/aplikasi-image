@@ -12,8 +12,8 @@
 <?php endif; ?>
 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 absolute" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 absolute" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-<script src="<?= BASE_URL ?>public/js/update.js?v=1"></script>
 <script src="<?= BASE_URL ?>public/js/direct.js?v=1"></script>
+<script src="<?= BASE_URL ?>public/js/update.js?v=1"></script>
 <script src="<?= BASE_URL ?>/node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>
